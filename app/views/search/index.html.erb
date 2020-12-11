@@ -1,0 +1,14 @@
+<h1>Members of the <%= params[:nation] %></h1>
+
+<% @results.each do |character| %>
+<div class="people">
+  <p><%= character.name %></p>
+  <% if character.photo_url %>
+      <img src="<%= character.photo_url %>" alt="no_image">
+  <% end %>
+  <p>Allies: <%= character.allies %></p>
+  <p>Enemies: <%= character.enemies %></p>
+  <p>Affiliation: <%= character.affiliation %></p>
+  <hr>
+</div>
+<% end %>
